@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/css/main.be5e1dcc.chunk.css",
+    "main.js": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/main.ddb71f98.chunk.js",
+    "main.js.map": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/main.ddb71f98.chunk.js.map",
+    "runtime-main.js": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/runtime-main.76e5293c.js",
+    "runtime-main.js.map": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/runtime-main.76e5293c.js.map",
+    "static/js/2.7329d150.chunk.js": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/2.7329d150.chunk.js",
+    "static/js/2.7329d150.chunk.js.map": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/2.7329d150.chunk.js.map",
+    "static/js/3.9db938e1.chunk.js": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/3.9db938e1.chunk.js",
+    "static/js/3.9db938e1.chunk.js.map": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/3.9db938e1.chunk.js.map",
+    "index.html": "/react-bootcamp/1.React-Basics/monsters-rolodex/index.html",
+    "static/css/main.be5e1dcc.chunk.css.map": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/css/main.be5e1dcc.chunk.css.map",
+    "static/js/2.7329d150.chunk.js.LICENSE.txt": "/react-bootcamp/1.React-Basics/monsters-rolodex/static/js/2.7329d150.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.76e5293c.js",
+    "static/js/2.7329d150.chunk.js",
+    "static/css/main.be5e1dcc.chunk.css",
+    "static/js/main.ddb71f98.chunk.js"
+  ]
+}
