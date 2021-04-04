@@ -1,0 +1,38 @@
+.collection-item {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 22%;
+  align-items: center;
+
+  .background-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;    
+  }
+
+  .collection-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+
+    .name {
+      margin-bottom: 15px;
+    }
+
+    .price {
+
+    }
+  }
+}
+
+  // &:hover {
+  //   cursor: pointer;
+  
+  //   // means children of the & class - & being collection Item
+  //   & .background-image {
+  //     opacity: 0.9;
+  //   }
+  // }
