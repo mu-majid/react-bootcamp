@@ -70,5 +70,7 @@
 
   * There is a **BAD PRACTICE** called *prop tunneling/drilling*, which means passing props from parent to children deep in the tree.
   * This could occur when passing `history` object from a Homepage down to Directory, then to MenuItems components (like in our app)
-        <Homepage> Rendered when "/" is visited => pass the history,location,match down to <Directory> => pass them again down to <MenuItem>
+      ```text
+      <Homepage> Rendered when "/" is visited => pass the history,location,match down to <Directory> => pass them again down to <MenuItem>
+      ```
   * A solution to this is using `withRouter()` HOC. that gives us access to history, location, and match objects.
