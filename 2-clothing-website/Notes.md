@@ -53,6 +53,17 @@
     </Switch>
     </div>)
   }
-```
+  ```
 
+  * when a component is rendered by `<Route>` component, three props are passed along with the props object of the component rendered.
+  * These three attributes are: 
+    - `match`: contains the `url` matched and caused the component to be rendered. And any url parameters. `url` is used for building dynamic routing with <Link> component (match.url + someId)
+    - `location`: tells us where we are now, using `pathname` property.
+    - `history`: the main thing here to focus on is `push`, this push is used instead of (and equivalent to) the <Link> component.
 
+  * When navigating we use `<Link>` react-router component or history.push as mentioned above.
+  ``` xml
+  <Link to="/another-resource">Click Here</Link>
+  ```
+  The idea here is that we're not re-rendering the app, but manipulating the DOM to hide and show components based on the url.
+  * if an anchor tag is used, this would cause the entire app to re-render. 
