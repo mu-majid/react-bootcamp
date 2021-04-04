@@ -67,3 +67,8 @@
   ```
   The idea here is that we're not re-rendering the app, but manipulating the DOM to hide and show components based on the url.
   * if an anchor tag is used, this would cause the entire app to re-render. 
+
+  * There is a **BAD PRACTICE** called *prop tunneling/drilling*, which means passing props from parent to children deep in the tree.
+  * This could occur when passing `history` object from a Homepage down to Directory, then to MenuItems components (like in our app)
+      <Homepage> Rendered when "/" is visited => pass the history,location,match down to <Directory> => pass them again down to <MenuItem>
+  * A solution to this is using `withRouter()` HOC. that gives us access to history, location, and match objects.
