@@ -78,3 +78,13 @@
   * Pay close attention to anonymous function calls like `map`, `filter`,...etc. inside our apps, because they are run every time the components gets rendered.
 
 ---
+
+### Authentication:
+
+  * In this App, Firebase was used for storing data(firestore), and also their authentication server, that allows Oauth (like sign in with google) and regular email/password login.
+
+  * The main pattern used in authentication in the app is event based. Whether we login (w/ email/password or google) or sign up, we subscribed to firebase `onAuthChange` method to send us back any change in the app's  `componentDidMount` lifecycle method.
+
+  * Firebase keeps auth users in their auth server, but we need to save them in our datastore (firestore). So there is a function called `createUserProfileDocument` that checks if the user causing the event to be triggered (login/signup) is in our DB or not (if not save him).
+
+  * We rely on firebase's user session persistence.
