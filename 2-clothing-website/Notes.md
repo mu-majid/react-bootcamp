@@ -76,3 +76,5 @@
   * A solution to this is using `withRouter()` HOC. that gives us access to history, location, and match objects.
 
   * Pay close attention to anonymous function calls like `map`, `filter`,...etc. inside our apps, because they are run every time the components gets rendered.
+
+---
