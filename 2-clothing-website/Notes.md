@@ -88,3 +88,25 @@
   * Firebase keeps auth users in their auth server, but we need to save them in our datastore (firestore). So there is a function called `createUserProfileDocument` that checks if the user causing the event to be triggered (login/signup) is in our DB or not (if not save him).
 
   * We rely on firebase's user session persistence.
+
+---
+
+### Redux Introduction:
+
+  * Redux introduces the idea of a store that holds all the attributes we need across all our components. Instead of making state local we globalize it in a store and these attributes gets passed down to components from the store as props by connecting the component to the store.
+
+  * check this [article](https://kentcdodds.com/blog/application-state-management-with-react) to avoid some misconception about redux.
+
+  * Concepts of Redux:
+    - Redux solves the issue when state gets really complicated.
+    - Useful for sharing data between components.
+    - Predictable state management using three principles:
+      1. Single source of truth (store)
+      2. State is read only (immutable object)
+      3. Changes using pure functions (for some input, we guarantee the output is predicted).
+
+  * Redux flow could be summarized as follows: Action(s) => Root Reducer => Store => DOM changes.
+
+  * Redux uses architectural pattern called [**Flux Pattern**](https://facebook.github.io/flux/docs/in-depth-overview/#:~:text=Flux%20is%20the%20application%20architecture,a%20lot%20of%20new%20code.).
+
+  ![redux-flow](./imgs/redux-flow.png)
