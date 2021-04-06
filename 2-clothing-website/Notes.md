@@ -110,3 +110,9 @@
   * Redux uses architectural pattern called [**Flux Pattern**](https://facebook.github.io/flux/docs/in-depth-overview/#:~:text=Flux%20is%20the%20application%20architecture,a%20lot%20of%20new%20code.).
 
   ![redux-flow](./imgs/redux-flow.png)
+
+  * **Why use redux?** -Ans. To get a better understanding, when we look at our app at [this commit](https://github.com/mu-majid/react-bootcamp/commit/866ad654f8d11b9409e53193ddfeece27027a8b7), If we need the currentUser state to be in a Cart component that will be inside the Header component, we will be drilling the currentUser state from the App -> Header -> Cart.
+
+  ![prop-drilling](./imgs/prop-drilling.png)
+
+
