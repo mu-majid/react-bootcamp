@@ -115,4 +115,14 @@
 
   ![prop-drilling](./imgs/prop-drilling.png)
 
+  * Actions are objects that gets send from Components to reducers, and update the state that in turn updates the components connected to that piece of state.
+
+  ![action](./imgs/action.png)
+
+  * Reducers are just functions that gets all dispatched actions, and each reducer determines whether it is concerned about an action or not by utilizing a Switch Statement to check on the action `type`.
+
+  * Also remember to return a new object when updating state from reducers. New objects means new memory addresses which means the state changed and causes re-render.
+
+  * Another piece in redux flow, is `Middleware`, which gets fired before the action reaching the reducer.
+
 
