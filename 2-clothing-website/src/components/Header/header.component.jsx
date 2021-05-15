@@ -7,7 +7,7 @@ import { auth } from '../../firebase/firebase.utils';
 import CartIcon from '../Cart-Icon/cart-icon.component';
 import CartDropdown from '../Cart-Dropdown/cart-dropdown.component';
 
-const Header = ({currentUser}) => {
+const Header = ({currentUser, hidden}) => {
   return (
     <div className="header">
 
@@ -28,13 +28,15 @@ const Header = ({currentUser}) => {
         <CartIcon />
       </div>
 
-      <CartDropdown />
+      {
+        hidden ? null : <CartDropdown />
+      }
     </div>
   )
 
 };
 const mapStateToProps = rootReducerState => {
-  return { currentUser: rootReducerState.user.currentUser }
+  return { currentUser: rootReducerState.user.currentUser, hidden: rootReducerState.cart.hidden }
 }
 
 export default  connect(mapStateToProps)(Header);
