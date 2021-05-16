@@ -130,3 +130,9 @@
   * An issue with this selector, is that it re-renders the component it is being used in as every time redux reducers return a new object, and `mapStateToProps` inside the component gets called even if the changed state is not used in the selector.
 
   * A solution for this issue is to memoize the value that the selector operate on. and to do so there is a library called `reselect`.
+
+  * Components `cart-dropdown` and `cart-icon` use this memoized redux selectors, so that they don't get re-rendered when unrelated state (anything except cartItems state) changes.
+
+  * The take away here is that redux's `mapStateToProps` has a shallow equality check for every value in the object; it won't replace values if they pass a shallow equality check which means it won't needlessly re-render, but if we have transformation (like reducing items to a single count number) logic it's still valuable to memoize it with a selector to save us running duplicate logic to get the same output.
+
+
