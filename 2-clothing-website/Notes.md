@@ -125,4 +125,8 @@
 
   * Another piece in redux flow, is `Middleware`, which gets fired before the action reaching the reducer.
 
+  * React Redux selectors are functions that pull out some piece of a state from the store and aggregates/uses it to show some information inside a react component. An example is showing the count of items inside a shopping cart on the cart icon, this uses the count or the quantity of all items in cart to show the number.
 
+  * An issue with this selector, is that it re-renders the component it is being used in as every time redux reducers return a new object, and `mapStateToProps` inside the component gets called even if the changed state is not used in the selector.
+
+  * A solution for this issue is to memoize the value that the selector operate on. and to do so there is a library called `reselect`.
