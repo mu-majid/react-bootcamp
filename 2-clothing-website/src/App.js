@@ -8,6 +8,8 @@ import Homepage from './pages/Homepage/Homepage.component';
 import ShopPage from './pages/Shop/shop.component';
 import SignInAndUpPage from './pages/Sign-in-up/sign-in-up.component';
 import { setCurrentUser } from './redux/user/user.actions';
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from './redux/user/user.selectors';
 
 class App extends React.Component {
 
@@ -76,8 +78,8 @@ const mapDispatchToProps = dispatch => ({
   setCurrentUser: user => dispatch(setCurrentUser(user))
 });
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
