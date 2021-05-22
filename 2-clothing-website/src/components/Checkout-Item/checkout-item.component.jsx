@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './checkout.styles.scss';
+import './checkout-item.styles.scss';
 
 const CheckoutItem = ({cartItem}) => {
   return (
     <div className="checkout-item">
-      <div className="img-container">
+      <div className="image-container">
         <img src={cartItem.imageUrl} alt="item"/>
       </div>
       <span className="name">{cartItem.name}</span>

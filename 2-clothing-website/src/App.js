@@ -10,7 +10,7 @@ import SignInAndUpPage from './pages/Sign-in-up/sign-in-up.component';
 import { setCurrentUser } from './redux/user/user.actions';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selectors';
-import CheckoutPage from './pages/Checkout/checkput.component';
+import CheckoutPage from './pages/Checkout/checkout.component';
 
 class App extends React.Component {
 
