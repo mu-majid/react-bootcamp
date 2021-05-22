@@ -135,4 +135,5 @@
 
   * The take away here is that redux's `mapStateToProps` has a shallow equality check for every value in the object; it won't replace values if they pass a shallow equality check which means it won't needlessly re-render, but if we have transformation (like reducing items to a single count number) logic it's still valuable to memoize it with a selector to save us running duplicate logic to get the same output.
 
-
+  * connect function passes the `dispatch` function as a prop to the connected component if mapDispatchToProps is not specified.
+  
