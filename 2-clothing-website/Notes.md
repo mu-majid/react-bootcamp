@@ -136,4 +136,13 @@
   * The take away here is that redux's `mapStateToProps` has a shallow equality check for every value in the object; it won't replace values if they pass a shallow equality check which means it won't needlessly re-render, but if we have transformation (like reducing items to a single count number) logic it's still valuable to memoize it with a selector to save us running duplicate logic to get the same output.
 
   * connect function passes the `dispatch` function as a prop to the connected component if mapDispatchToProps is not specified.
-  
+
+### Session Storage and Persistence:
+
+  * Remember our user status is handled by firebase, so right now the logged in user session persistence is not handled by our application.
+
+  * If the user reloads the page, he/she would lose all the app's state (like cart Items).
+
+  * `redux-persist` is a library that uses local storage to store the current state of an app.
+
+  * Session storage stores data during a session (an opened tab), and local storage stores data until we clear it.
