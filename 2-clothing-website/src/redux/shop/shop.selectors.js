@@ -3,7 +3,7 @@ import memoize from 'lodash.memoize';
 
 const COLLECTION_URL_ID_MAP = {
   hats: 1,
-  sneaker: 2,
+  sneakers: 2,
   jackets: 3,
   womens: 4,
   mens: 5
