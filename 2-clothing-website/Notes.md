@@ -146,3 +146,9 @@
   * `redux-persist` is a library that uses local storage to store the current state of an app.
 
   * Session storage stores data during a session (an opened tab), and local storage stores data until we clear it.
+
+### Data Normalization: 
+
+  * Whenever the data is in an array data structure, and there will be a search query (find, filter, ...) on it, and this array tends to get big. Data normalization is used which basically means we convert the array into object for shorter search time.
+
+  * The idea is well explained [here](https://www.kirupa.com/html5/hashtables_vs_arrays.htm)
