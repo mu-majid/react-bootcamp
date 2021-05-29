@@ -33,13 +33,14 @@ class App extends React.Component {
               ...snapShot.data()
             }
           );
-          
+
         });
       }
-      else{
+      else {
         // in case of sign out, set currentUser to null
         console.log(' auth change ELSE')
         setCurrentUser(userAuth);
+
       }
 
     });
@@ -53,7 +54,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <Header/>
+        <Header />
         <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={ShopPage} />
@@ -82,7 +83,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
