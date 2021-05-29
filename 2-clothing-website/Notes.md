@@ -152,3 +152,12 @@
   * Whenever the data is in an array data structure, and there will be a search query (find, filter, ...) on it, and this array tends to get big. Data normalization is used which basically means we convert the array into object for shorter search time.
 
   * The idea is well explained [here](https://www.kirupa.com/html5/hashtables_vs_arrays.htm)
+
+### CSS In JS (Styled Components):
+
+  * Remember that CSS share a global namespace, so classnames should be unique (or grouping elements that are intended to have these classes).
+  * BEM is used as a rule for naming our CSS classes (but it tends to get big and we end up having so many classes)
+  * CSS in JS is essentially a js library that allows us to write CSS in js objects, but this also has some cons.
+  * One of the benefits of CSS in JS is it aligns with the components concepts react uses, meaning that all the styles are scoped to its components.
+  * The styled-components library is the most popular one. It creates unique classnames for the styled component.
+  * One of the most powerful features of the styled components library is the ability to access props inside the css.
