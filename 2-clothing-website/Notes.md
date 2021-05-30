@@ -162,4 +162,17 @@
   * The styled-components library is the most popular one. It creates unique classnames for the styled component.
   * One of the most powerful features of the styled components library is the ability to access props inside the css.
 
-  
+### Observables/Observers Pattern:
+
+  * Observable is a piece of code that wraps around the stream (data, or events) to be able to do something with it.
+  * Observer (listener) is another piece of code that has three main functions: 
+    1. `next`: (nextValue => {})
+    2. `error`: (error => {})
+    3. `complete`: (() => {})
+
+  * When we create a subscription, we are binding the observer to the observable, and telling the observable to run the observer's main functions on the stream of data that it (observable) gets.
+
+### Async Redux:
+
+  * `redux-thunk` is a library that is used to have async actions in redux. Async actions for example are like trying to fetch data from a third party API.
+  * The main idea is that thunk middleware checks if the action creator returns a function, and if so, it passes the `dispatch` function as a first argument to the function returned from the action creator. 
