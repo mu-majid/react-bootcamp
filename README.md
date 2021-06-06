@@ -1,4 +1,4 @@
-## Overview:
+## Repository Overview:
 
   - This Repo starts with revising some react basics.
   - Then start building an E-Commerce application with redux, stripe, and firebase.
