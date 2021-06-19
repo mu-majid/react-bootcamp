@@ -176,3 +176,11 @@
 
   * `redux-thunk` is a library that is used to have async actions in redux. Async actions for example are like trying to fetch data from a third party API.
   * The main idea is that thunk middleware checks if the action creator returns a function, and if so, it passes the `dispatch` function as a first argument to the function returned from the action creator. 
+
+### Sagas :
+  * A good way to think sagas is to to imagine them as functions that condintionally run.
+  * When sagas are used, we are giving more and more reponsibilty to redux instead of just handling state.
+  * we put every async or impure code/functions in these sagas to separate it from our react code.
+  * Reducers fire first, then sagas receive the action. From there, sagas can fire off new actions which in turn hit the reducers and other sagas as well!
+  * Sagas are using the same concept of generators, that stop the execution and resumes it.
+
