@@ -184,3 +184,6 @@
   * Reducers fire first, then sagas receive the action. From there, sagas can fire off new actions which in turn hit the reducers and other sagas as well!
   * Sagas are using the same concept of generators, that stop the execution and resumes it.
 
+  * `takeEvery`: takeEvery allows concurrent actions to be handled. In the example above, when a USER_REQUESTED action is dispatched, a new fetchUser task is started even if a previous fetchUser is still pending (for example, the user clicks on a Load User button 2 consecutive times at a rapid rate, the 2nd click will dispatch a USER_REQUESTED action while the fetchUser fired on the first one hasn't yet terminated)
+
+  takeEvery doesn't handle out of order responses from tasks. There is no guarantee that the tasks will terminate in the same order they were started. To handle out of order responses, you may consider `takeLatest`.
