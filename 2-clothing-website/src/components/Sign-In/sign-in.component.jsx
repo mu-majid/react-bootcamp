@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { auth, signInWithGoogle } from '../../firebase/firebase.utils';
+import { auth } from '../../firebase/firebase.utils';
 import { googleSignInSart } from '../../redux/user/user.actions';
 import Button from '../Button/button.component';
 import FormInput from '../Form-Input/form-input.component';
