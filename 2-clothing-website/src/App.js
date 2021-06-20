@@ -18,37 +18,37 @@ class App extends React.Component {
   unsubFromAuth = null;
 
   componentDidMount() {
-    const { setCurrentUser } = this.props;
-    // subscribe to firebase auth, we get user session persistence from this subscription
-    this.unsubFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        console.log(' auth change IF')
+    // const { setCurrentUser } = this.props;
+    // // subscribe to firebase auth, we get user session persistence from this subscription
+    // this.unsubFromAuth = auth.onAuthStateChanged(async userAuth => {
+    //   if (userAuth) {
+    //     console.log(' auth change IF')
 
-        const userRef = await createUserProfileDocument(userAuth);
+    //     const userRef = await createUserProfileDocument(userAuth);
 
-        userRef.onSnapshot(snapShot => {
-          setCurrentUser(
-            {
-              id: snapShot.id,
-              ...snapShot.data()
-            }
-          );
+    //     userRef.onSnapshot(snapShot => {
+    //       setCurrentUser(
+    //         {
+    //           id: snapShot.id,
+    //           ...snapShot.data()
+    //         }
+    //       );
 
-        });
-      }
-      else {
-        // in case of sign out, set currentUser to null
-        console.log(' auth change ELSE')
-        setCurrentUser(userAuth);
+    //     });
+    //   }
+    //   else {
+    //     // in case of sign out, set currentUser to null
+    //     console.log(' auth change ELSE')
+    //     setCurrentUser(userAuth);
 
-      }
+    //   }
 
-    });
+    // });
 
   }
   // to prevent memory leaks, unsub from firebase auth
   componentWillUnmount() {
-    this.unsubFromAuth();
+    // this.unsubFromAuth();
   }
   render() {
 
