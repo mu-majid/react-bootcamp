@@ -1,26 +1,25 @@
-import { createSelector } from 'reselect';
 import memoize from 'lodash.memoize';
-
-
 // Memoization of a redux state selector to prevent multiple un-necessary renders
+import { createSelector } from 'reselect';
 
 const selectShop = state => state.shop;
-export const selectShopCollections = createSelector(
+
+export const selectCollections = createSelector(
   [selectShop],
   shop => shop.collections
 );
 
 export const selectCollectionsForPreview = createSelector(
-  [selectShopCollections],
-  (collections) => collections ? Object.keys(collections).map(key => collections[key]) : []
-)
-
-export const selectCollection = memoize((collectionUrlParam) =>
-  createSelector(
-    [selectShopCollections],
-    (collections) => collections ? collections[collectionUrlParam] : null
-  )
+  [selectCollections],
+  collections =>
+    collections ? Object.keys(collections).map(key => collections[key]) : []
 );
+
+export const selectCollection = collectionUrlParam =>
+  createSelector(
+    [selectCollections],
+    collections => (collections ? collections[collectionUrlParam] : null)
+  );
 
 export const selectIsCollectionFetching = createSelector(
   [selectShop],
