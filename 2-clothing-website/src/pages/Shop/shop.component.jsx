@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import CollectionPageContainer from '../Collection/collection.container.jsx';
 import CollectionsOverviewContainer from '../../components/Collections-Overview/collection-overview.container.jsx';
-import { fetchCollectionsStart } from '../../redux/shop/shop.sagas.js';
+import { fetchCollectionsStart } from '../../redux/shop/shop.actions.js';
 
 
 class ShopPage extends React.Component {
