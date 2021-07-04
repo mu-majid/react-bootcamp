@@ -9,6 +9,7 @@ import SignInAndUpPage from './pages/Sign-in-up/sign-in-up.component';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import CheckoutPage from './pages/Checkout/checkout.component';
+import { checkUserSession } from './redux/user/user.actions';
 
 class App extends React.Component {
 
@@ -42,7 +43,8 @@ class App extends React.Component {
     //   }
 
     // });
-
+    const { checkUserSession } = this.props;
+    checkUserSession();
   }
   // to prevent memory leaks, unsub from firebase auth
   componentWillUnmount() {
@@ -77,7 +79,14 @@ class App extends React.Component {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser,
+  currentUser: selectCurrentUser
 });
 
-export default connect(mapStateToProps, null)(App);
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

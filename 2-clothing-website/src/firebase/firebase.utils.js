@@ -72,6 +72,8 @@ export const convertCollectionsSnapshotToMap = collections => {
   }, {});
 };
 
+// Since firebase does not give us a way to check for user session in a promise way
+// we're subscribing and unsubscribing right away after we get the user status
 export const getCurrentUser = () => {
   return new Promise((resolve, reject) => {
     const unsubscribe = auth.onAuthStateChanged(userAuth => {
