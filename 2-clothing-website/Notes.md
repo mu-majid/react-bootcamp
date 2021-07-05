@@ -187,3 +187,11 @@
   * `takeEvery`: takeEvery allows concurrent actions to be handled. In the example above, when a USER_REQUESTED action is dispatched, a new fetchUser task is started even if a previous fetchUser is still pending (for example, the user clicks on a Load User button 2 consecutive times at a rapid rate, the 2nd click will dispatch a USER_REQUESTED action while the fetchUser fired on the first one hasn't yet terminated)
 
   takeEvery doesn't handle out of order responses from tasks. There is no guarantee that the tasks will terminate in the same order they were started. To handle out of order responses, you may consider `takeLatest`.
+
+### React Hooks API: 
+
+  * One of the main purposes react hooks were introduced, is to have same functionality used in class components within functional components.
+  * Like for example the internal state that was only used with class components.
+  * `useState` hook allows us to have internal state inside a functional component as we would have in a class component.
+  * `useEffect` hook allows us to fire side effects inside our component.
+  * Remember useEffect could be called conditionally, but you have to make the if statement inside the useEffect call.
