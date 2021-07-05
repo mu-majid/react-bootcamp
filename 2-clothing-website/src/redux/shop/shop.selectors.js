@@ -1,4 +1,4 @@
-import memoize from 'lodash.memoize';
+// import memoize from 'lodash.memoize';
 // Memoization of a redux state selector to prevent multiple un-necessary renders
 import { createSelector } from 'reselect';
 
