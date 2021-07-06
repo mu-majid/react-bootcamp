@@ -238,3 +238,7 @@
         console.log('count changed', props.count);
     }, [props.count])
   ```
+
+  * react router hooks docs: https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/hooks.md
+  * react redux hooks docs: https://react-redux.js.org/api/hooks
+  * react useEffect Hook docs: https://overreacted.io/a-complete-guide-to-useeffect/
