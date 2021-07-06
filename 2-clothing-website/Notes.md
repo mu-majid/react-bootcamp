@@ -195,3 +195,46 @@
   * `useState` hook allows us to have internal state inside a functional component as we would have in a class component.
   * `useEffect` hook allows us to fire side effects inside our component.
   * Remember useEffect could be called conditionally, but you have to make the if statement inside the useEffect call.
+
+  ComponentDidMount
+  ``` Javascript
+    //Class
+    componentDidMount() {
+        console.log('I just mounted!');
+    }
+    
+    //Hooks
+    useEffect(() => {
+        console.log('I just mounted!');
+    }, [])
+  ```
+
+
+  ComponentWillUnmount
+  ``` javascript
+    //Class
+    componentWillUnmount() {
+        console.log('I am unmounting');
+    }
+    
+    //Hooks
+    useEffect(() => {
+        return () => console.log('I am unmounting');
+    }, [])
+  ```
+
+
+  ComponentWillReceiveProps
+  ``` javascript
+    //Class
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.count !== this.props.count) {
+            console.log('count changed', nextProps.count);
+        }
+    }
+    
+    //Hooks
+    useEffect(() => {
+        console.log('count changed', props.count);
+    }, [props.count])
+  ```
