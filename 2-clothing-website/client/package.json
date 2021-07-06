@@ -35,7 +35,8 @@
     "workbox-range-requests": "^5.1.4",
     "workbox-routing": "^5.1.4",
     "workbox-strategies": "^5.1.4",
-    "workbox-streams": "^5.1.4"
+    "workbox-streams": "^5.1.4",
+    "redux-saga": "1.0.2"
   },
   "scripts": {
     "start": "react-scripts start",
