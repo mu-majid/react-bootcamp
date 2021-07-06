@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import StripeCheckoutComponent from 'react-stripe-checkout';
 
 const StripeButton = ({ price }) => {
@@ -6,9 +7,24 @@ const StripeButton = ({ price }) => {
   const publishableKey = 'pk_test_iAnex3msjdjbPw0d3DQXrFMq00a7jGYVMZ';
 
   const onToken = token => {
-    console.log(token);
-    alert(`Paid $${price} To Crown Clothing Ltd.`)
-  }
+    axios({
+      url: 'payment',
+      method: 'post',
+      data: {
+        amount: stripePrice,
+        token: token
+      }
+    })
+      .then(response => {
+        alert('succesful payment');
+      })
+      .catch(error => {
+        console.log('Payment Error: ', error);
+        alert(
+          'There was an issue with your payment! Please make sure you use the provided credit card.'
+        );
+      });
+  };
 
   return (
     <StripeCheckoutComponent
