@@ -242,3 +242,26 @@
   * react router hooks docs: https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/hooks.md
   * react redux hooks docs: https://react-redux.js.org/api/hooks
   * react useEffect Hook docs: https://overreacted.io/a-complete-guide-to-useeffect/
+
+### React Context API:
+  * The motivation behind context API is to save some states in a context object and make other components hook themselves into that context object and use these states.
+  * This could be used to prevent the prop drilling anti pattern.
+  * Contexts could be used in this way: 
+
+  ``` javascript
+  <YourContext.Consumer>
+    {
+      contextStoredObject => {
+        // do you logic
+        return (
+          <div>
+            // Your JSX Here.
+          </div>
+        )
+      }
+    }
+  </YourContext.Consumer>
+  ```
+
+  or could be consumed useing the `useContext()` hook, which you provide the context as an argument and get back whatever the context is wrapping.
+  
