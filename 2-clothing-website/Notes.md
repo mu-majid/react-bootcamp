@@ -264,4 +264,8 @@
   ```
 
   or could be consumed useing the `useContext()` hook, which you provide the context as an argument and get back whatever the context is wrapping.
-  
+
+  * the consumer will look up the tree for a provider (for the same context), and if it did not find any, will use the initial value for the state it is trying to access.
+  * So provider should wrap a component that inside of it uses the consumer.
+  * Any consumer leveraging a provided value, will re-render whenever the provided value changes.
+  * I t does not replace redux, it just tries to solve the prop drilling problem, because if you used context api, you will eventually need to handle state locally, and pass it around to deeply nested components (with the provider/consumer paradigm)
