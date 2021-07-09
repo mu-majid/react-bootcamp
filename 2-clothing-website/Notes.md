@@ -269,3 +269,7 @@
   * So provider should wrap a component that inside of it uses the consumer.
   * Any consumer leveraging a provided value, will re-render whenever the provided value changes.
   * I t does not replace redux, it just tries to solve the prop drilling problem, because if you used context api, you will eventually need to handle state locally, and pass it around to deeply nested components (with the provider/consumer paradigm)
+  * you can share a local state of a component using the contextAPI, buy passing this local state into the context provider, and then consume that context where ever is needed.
+  * Redux vs Context: From my prespective, contextAPI tightly couple your component with the state it needs and contexts it relies on, and that violate the composability of our components.
+  * Also using ContextAPI we lose the async handling functionalities we had with redux via sagas and thunks.
+  * Large apps of course needs Redux (no doubt), but small applications like a portofolio or something you can use contextAPI.
