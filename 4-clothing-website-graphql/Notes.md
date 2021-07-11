@@ -6,3 +6,8 @@
 
   * A GraphQL server exposes only one endpoint (usually called /graphql). Then our FrontEnd App sends requests to this endpoint (Query to get data, and Mutation to Modify data).
   * Basic types: https://graphql.org/graphql-js/basic-types/
+
+  Apollo Client: 
+
+  * It caches the results fetched from graphql server, so that, when we try to fetch the same data, we get from the cache and not from databse.
+  * Apollo is also used as state management in a react app, removing the need for redux, sagas, thunks
