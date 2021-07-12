@@ -10,4 +10,18 @@
   Apollo Client: 
 
   * It caches the results fetched from graphql server, so that, when we try to fetch the same data, we get from the cache and not from databse.
-  * Apollo is also used as state management in a react app, removing the need for redux, sagas, thunks
+  * Apollo is also used as state management in a react app, removing the need for redux, sagas, thunks.
+
+### GraphQL(Apollo) vs Redux: 
+
+  * They could be used alongside each other, but the problem is we end up with two client state management libraries.
+  * This is a comparison of the flow of the two libraries:
+
+  Redux: 
+
+  ![lifecycles](./img/redux-flow.png)
+
+  Apollo: 
+
+  ![lifecycles](./img/apollo-flow.png)
+
