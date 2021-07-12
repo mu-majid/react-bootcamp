@@ -1,6 +1,5 @@
-
 import React from 'react';
-import {  graphql } from 'react-apollo';
+import { compose, graphql } from 'react-apollo';
 import { gql } from 'apollo-boost';
 import { flowRight } from 'lodash';
 
