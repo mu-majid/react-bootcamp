@@ -5,3 +5,5 @@
   - Also GraphQL, styled-components, Context API, and React Hooks +more are covered
   - In Each folder, There are a bunch of `md` files ordered by the time they were written.
 
+  - main notes are in folder 2-clothing-website.
+

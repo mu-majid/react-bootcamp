@@ -282,3 +282,11 @@
 
   * A GraphQL server exposes only one endpoint (usually called /graphql). Then our FrontEnd App sends requests to this endpoint (Query to get data, and Mutation to Modify data).
   * Basic types: https://graphql.org/graphql-js/basic-types/
+
+### React Performance:
+
+  * First topic is Code splitting: https://create-react-app.dev/docs/code-splitting/
+  * The ides is that when a user navigate to a page he/she only gets the code, libraries, ... needed for that page.
+  * webpack do what is known as bundling static imports into one big file, but we need to leverage what is known as dynamic imports.
+  * This can be done using the `lazy` and `Route` components from react library.
+  * Remember to do a hard refresh: command+shift+r
