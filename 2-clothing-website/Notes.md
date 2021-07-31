@@ -290,3 +290,7 @@
   * webpack do what is known as bundling static imports into one big file, but we need to leverage what is known as dynamic imports.
   * This can be done using the `lazy` and `Route` components from react library.
   * Remember to do a hard refresh: command+shift+r
+  * using lazy and suspense is beneftial when used with Pages, but there is limited benefit when used with small components like headers.
+  * Using error boundaries is a good approach as they serve as catch all for the wrapped components.
+  * Static method `getDerivedStateFromError` receives the error that occured inside any of the wrapped components or their children.
+  

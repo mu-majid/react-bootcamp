@@ -9,6 +9,7 @@ import { checkUserSession } from './redux/user/user.actions';
 import { lazy } from 'react';
 import { Suspense } from 'react';
 import Spinner from './components/Spinner/spinner.component';
+import ErrorBoundary from './components/Error-Boundary/error-boundary.component';
 
 const Homepage = lazy(() => import('./pages/Homepage/Homepage.component'))
 const ShopPage = lazy(() => import('./pages/Shop/shop.component'))
@@ -60,24 +61,26 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <Switch>
-          <Suspense fallback={<Spinner />}>
-            <Route exact path="/" component={Homepage} /> 
-            <Route path="/shop" component={ShopPage} />
-            <Route exact path="/checkout" component={CheckoutPage} />
+          <ErrorBoundary>
+            <Suspense fallback={<Spinner />}>
+              <Route exact path="/" component={Homepage} />
+              <Route path="/shop" component={ShopPage} />
+              <Route exact path="/checkout" component={CheckoutPage} />
 
-            {/* <Route exact path="/signin" component={SignInAndUpPage}/> */}
-            <Route
-              exact
-              path='/signin'
-              render={() =>
-                this.props.currentUser ? (
-                  <Redirect to='/' />
-                ) : (
-                  <SignInAndUpPage />
-                )
-              }
-            />
-          </Suspense>
+              {/* <Route exact path="/signin" component={SignInAndUpPage}/> */}
+              <Route
+                exact
+                path='/signin'
+                render={() =>
+                  this.props.currentUser ? (
+                    <Redirect to='/' />
+                  ) : (
+                    <SignInAndUpPage />
+                  )
+                }
+              />
+            </Suspense>
+          </ErrorBoundary>
         </Switch>
       </div>
     );
