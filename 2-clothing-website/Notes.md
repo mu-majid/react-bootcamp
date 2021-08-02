@@ -293,4 +293,11 @@
   * using lazy and suspense is beneftial when used with Pages, but there is limited benefit when used with small components like headers.
   * Using error boundaries is a good approach as they serve as catch all for the wrapped components.
   * Static method `getDerivedStateFromError` receives the error that occured inside any of the wrapped components or their children.
-  
+
+  **Pure Components** *And* **React.Memo**
+
+  *  They are both used to limit number of re-renders of children components that their props and state did not change when the parent component re-renders.
+  * Memo is used for the functional component, and PureComponent is for class components.
+  * Pay attention to how the components are re-rendered needlessly using the profiler in react dev tools.
+  * PureComponent is the same as implementing componentShouldUpdate lifecycle method and doing the shallow comparison between the nextProps and current props ourselves.
+  * Check this link: https://reactjs.org/blog/2019/08/15/new-react-devtools.html 
