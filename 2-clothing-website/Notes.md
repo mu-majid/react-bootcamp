@@ -285,6 +285,7 @@
 
 ### React Performance:
 
+  * Cheat sheet: https://houssein.me/progressive-react
   * First topic is Code splitting: https://create-react-app.dev/docs/code-splitting/
   * The ides is that when a user navigate to a page he/she only gets the code, libraries, ... needed for that page.
   * webpack do what is known as bundling static imports into one big file, but we need to leverage what is known as dynamic imports.
