@@ -300,4 +300,5 @@
   * Memo is used for the functional component, and PureComponent is for class components.
   * Pay attention to how the components are re-rendered needlessly using the profiler in react dev tools.
   * PureComponent is the same as implementing componentShouldUpdate lifecycle method and doing the shallow comparison between the nextProps and current props ourselves.
-  * Check this link: https://reactjs.org/blog/2019/08/15/new-react-devtools.html 
+  * Check this link: https://reactjs.org/blog/2019/08/15/new-react-devtools.html
+  * Be aware of in-lining objects, arrays, and functions, because every time we will be passing a new object which means memoizing would be useless.
