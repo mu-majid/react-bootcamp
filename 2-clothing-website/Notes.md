@@ -302,3 +302,14 @@
   * PureComponent is the same as implementing componentShouldUpdate lifecycle method and doing the shallow comparison between the nextProps and current props ourselves.
   * Check this link: https://reactjs.org/blog/2019/08/15/new-react-devtools.html
   * Be aware of in-lining objects, arrays, and functions, because every time we will be passing a new object which means memoizing would be useless.
+  
+  **useCallback(fn, [deps])**
+
+  * This hook is used to memoize a function, so that on every render we don't create a new version of this function.
+  * This becomes handy when we have optimize our performance in a react app.
+  * If the [deps] array does not change the return from useCallback will be the same exact instance of `fn` (Memoized version), but if one of `deps` changes, this means a new instance of `fn` is returned.
+
+  **useMemo(fn, [deps])**
+
+  * This hook is used when we want to cache the result of a function that does some complex calculations.
+  * The same concept as useCallback, but here we are caching the result of a function.
